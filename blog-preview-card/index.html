@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Blog preview card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @font-face {
+        font-family: "Figtree";
+        font-weight: 500;
+        font-style: normal;
+        font-display: block;
+        src: url("./assets/fonts/static/Figtree-Medium.ttf") format("truetype");
+      }
+
+      @font-face {
+        font-family: "Figtree";
+        font-weight: 800;
+        font-style: normal;
+        font-display: block;
+        src: url("./assets/fonts/static/Figtree-ExtraBold.ttf")
+          format("truetype");
+      }
+
+      :root {
+        --color-yellow: #f4d04e;
+        --color-gray-950: #111111;
+        --color-gray-500: #6b6b6b;
+        --color-white: #ffffff;
+
+        --spacing-50: 4px;
+        --spacing-100: 8px;
+        --spacing-150: 12px;
+        --spacing-200: 24px;
+
+        --font-size-text-preset-1: 24px;
+        --font-size-text-preset-2: 16px;
+        --font-size-text-preset-3: 14px;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: var(--color-yellow);
+      }
+
+      div,
+      span,
+      p,
+      h1,
+      main,
+      img {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        letter-spacing: 0px;
+      }
+
+      .container {
+        color: var(--color-gray-950);
+        min-height: 100vh;
+        padding: var(--spacing-200);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: var(--spacing-200);
+      }
+
+      .text-preset-1 {
+        color: var(--color-gray-950, #111);
+
+        /* text-preset-1 */
+        font-family: Figtree;
+        font-size: var(--font-size-text-preset-1);
+        font-style: normal;
+        font-weight: 800;
+        line-height: 150%; /* 36px */
+      }
+
+      .text-preset-2 {
+        color: var(--color-gray-500);
+
+        /* text-preset-2 */
+        font-family: Figtree;
+        font-size: var(--font-size-text-preset-2);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 24px */
+      }
+
+      .text-preset-3 {
+        /* text-preset-3 */
+        font-family: Figtree;
+        font-size: var(--font-size-text-preset-3);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 21px */
+      }
+
+      .text-preset-3-bold {
+        color: var(--color-gray-950);
+
+        /* text-preset-3-bold */
+        font-family: Figtree;
+        font-size: var(--font-size-text-preset-3);
+        font-style: normal;
+        font-weight: 800;
+        line-height: 150%; /* 21px */
+      }
+
+      .card {
+        margin: auto;
+
+        display: flex;
+        box-sizing: padding-box;
+        max-width: 384px;
+        padding: var(--spacing-200);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-200);
+
+        border-radius: 20px;
+        border: 1px solid var(--color-gray-950);
+        background: var(--color-white);
+        box-shadow: 8px 8px 0px 0px #000;
+      }
+
+      .card:hover {
+        cursor: pointer;
+      }
+
+      .card:hover .title {
+        color: var(--color-yellow);
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-150);
+        align-items: flex-start;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      .blog-image {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+      }
+
+      .category {
+        display: flex;
+        padding: var(--spacing-50) var(--spacing-150);
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 4px;
+        background: var(--color-yellow);
+      }
+
+      .publish-date {
+      }
+
+      .title {
+        transition: color 0.3s;
+      }
+
+      .description {
+      }
+
+      .author {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-150);
+      }
+
+      .user-pic {
+        width: 32px;
+      }
+
+      .author-name {
+      }
+
+      @media only screen and (max-width: 600px) {
+        .category .text-preset-3-bold {
+          font-size: 12px;
+        }
+        .text-preset-3 {
+          font-size: 12px;
+        }
+        .text-preset-1 {
+          font-size: 20px;
+        }
+        .text-preset-2 {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <div>
+    <div class="container">
+      <main class="card">
+        <img
+          class="blog-image"
+          alt="abstract illustration"
+          src="./assets/images/illustration-article.svg"
+        />
+        <div class="content">
+          <div class="category">
+            <span class="text-preset-3-bold">Learning</span>
+          </div>
+          <p class="publish-date text-preset-3">Published 21 Dec 2023</p>
+          <h1 class="title text-preset-1">HTML & CSS foundations</h1>
+          <p class="description text-preset-2">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+        </div>
+        <div class="author">
+          <img class="user-pic" src="./assets/images/image-avatar.webp" alt="user avatar"/>
+          <span class="author-name text-preset-3-bold">Greg Hooper</span>
+        </div>
+      </main>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
