@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=block"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <title>NFT preview card component</title>
+  </head>
+  <body>
+    <main class="splash">
+      <article class="card" tabindex="0">
+        <div class="card__image">
+          <div class="card__image-overlay">
+            <img
+              class="card__image-overlay-icon"
+              src="./images/icon-view.svg"
+              alt="eye"
+            />
+          </div>
+          <div class="card__image-overlay">
+            <div class="card__image-overlay-fill"></div>
+          </div>
+          <img
+            class="card__image-base"
+            src="./images/image-equilibrium.jpg"
+            alt="cube"
+          />
+        </div>
+
+        <section class="card__content">
+          <div class="card__title">Equilibrium #3429</div>
+          <div class="card__description">
+            Our Equilibrium collection promotes balance and calm.
+          </div>
+        </section>
+
+        <section class="card__stats">
+          <div class="stat-left">
+            <img src="./images/icon-ethereum.svg" alt="clock icon" />
+            <div class="stat-left__text">0.041 ETH</div>
+          </div>
+          <div class="stat-right">
+            <img src="./images/icon-clock.svg" alt="bid icon" />
+            <div class="stat-right__text">3 days left</div>
+          </div>
+        </section>
+
+        <footer class="card__author">
+          <img
+            class="card__author-avatar"
+            src="./images/image-avatar.png"
+            alt="author avatar"
+          />
+          <div class="card__author-caption">Creation of</div>
+          <div class="card__author-name">Jules Wyvern</div>
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>
