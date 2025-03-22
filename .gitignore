@@ -20,4 +20,6 @@ README-template.md
 *.zip
 *figma
 */README*.md
+*/dist
 __MACOSX
+node_modules
